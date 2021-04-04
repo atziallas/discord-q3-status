@@ -3,6 +3,10 @@ Show player count from your Quake 3 based server through changing the name of a 
 
 <img src="https://img.shields.io/github/license/verdienste/discord-q3-status">
 
+## 📖 Compatibility
+Currently tested and working with Movie Battles II servers (Jedi Academy mod).  
+Feel free to test with other Quake 3 games and raise an issue if you encounter any problems.
+
 ## 📋 Installation
 This script needs Python 3 to run.
 Only dependency is discord.py so you only need to run:<br>

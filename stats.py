@@ -49,9 +49,10 @@ async def update_player_count():
         response = await send_command("getinfo")
         try:
             players_count = re.match(r'.*?g_humanplayers\\(\d*?)\\.*', response, re.DOTALL).groups()[0]
+            max_players = re.match(r'.*?sv_maxclients\\(\d*?)\\.*', response, re.DOTALL).groups()[0]
             logger_count.info("Getting discord channel")
             channel = client.get_channel(config.DISCORD_COUNT_CHANNEL)
-            new_name = 'Players: ' + players_count + '/32'
+            new_name = f'Players: {players_count}/{max_players}'
             if edit_task:
                 if not edit_task.done():
                     logger_count.info("Cancelling previous discord API task")
@@ -59,7 +60,7 @@ async def update_player_count():
             logger_count.info("Changing discord channel name")
             edit_task = asyncio.ensure_future(edit_channel(channel, new_name))
             logger_count.info("Channel name change sent to discord api with name: " + new_name)
-            logger_count.info("======= SLEEP FOR %s seconds =======" % config.COUNT_UPDATE_INTERVAL)
+            logger_count.info("============== SLEEP FOR %s seconds ==============" % config.COUNT_UPDATE_INTERVAL)
             await asyncio.sleep(config.COUNT_UPDATE_INTERVAL)
         except Exception as e:
             logger_count.error(e)
