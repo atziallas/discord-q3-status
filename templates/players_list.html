@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <style>
+        .backround {
+            background-color: rgb(49, 51, 56);
+            font-family: Helvetica, sans-serif;
+            font-size: 10px;
+        }
+
+        .table {
+            border-spacing: 8px;
+        }
+
+        .table td {
+            /* padding: 0px 0px 0px 4px; */
+            text-wrap: nowrap;
+        }
+
+        .table th {
+            color: white;
+            text-align: left;
+        }
+
+        .black {
+            color: black;
+        }
+
+        .red {
+            color: rgb(255, 26, 26);
+        }
+
+        .green {
+            color: green;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .blue {
+            color: rgb(51, 225, 255);
+        }
+
+        .cyan {
+            color: cyan;
+        }
+
+        .purple {
+            color: rgb(255, 26, 255);
+        }
+
+        .white {
+            color: white;
+        }
+
+        .orange {
+            color: orange;
+        }
+
+        .grey {
+            color: grey;
+        }
+    </style>
+</head>
+
+<body class="backround">
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Ping</th>
+        </tr>
+        {% for player in players %}
+        <tr>
+            <td>
+                {{ player.html_name }}
+            </td>
+            <td class="white">{{ player.ping }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
