@@ -10,7 +10,7 @@ Show player count from your Quake 3 based server through changing the name of a 
 
 <img src="images/botResponse.png" width="226">
 <br>
-<br>
+
 
 <img src="https://img.shields.io/github/license/verdienste/discord-q3-status">
 
