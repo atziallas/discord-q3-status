@@ -48,7 +48,7 @@ The following are needed only if you set ```ENABLE_COUNT_CHANNEL=True```
 (right now Discord allows voice channel name change every 5 minutes, so 300 is the minimum possible value for now)
 
 ## 🚀 How to run
-Just run the stats.py script: <br><br>
+Just run the bot.py script: <br><br>
 ```python bot.py``` <br>&nbsp;or<br> ```python3 bot.py```<br><br>
 Script logs events to file ```main.log```
 
