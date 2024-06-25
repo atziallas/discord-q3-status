@@ -6,8 +6,6 @@ Voice Channel with player count:
 
 <img src="images/playerCountChannel.png" width="140">
 
-<br>
-
 Responds to ```/player``` command with full player list.
 
 Bot Response:
