@@ -2,15 +2,11 @@
 
 Show player count from your Quake 3 based server through changing the name of a Discord channel on your guild.
 
-Voice Channel with player count:
+#### Voice Channel with player count:
 
 <img src="images/playerCountChannel.png" width="140">
 
-<br>
-
-Responds to ```/player``` command with full player list.
-
-Bot Response:
+#### Responds to ```/player``` command with full player list:
 
 <img src="images/botResponse.png" width="226">
 <br>
