@@ -19,7 +19,13 @@ cached_image = None
 
 class Q3DiscordClient(discord.Client):
     async def on_ready(self):
-        # await tree.sync(guild=discord.Object(id=config.DISCORD_SERVER_ID))
+
+        # these commands are here just in case you have to clean 'guild' commands 
+        # that might be duplicating the 'global' commands
+        # guild = self.get_guild(config.DISCORD_SERVER_ID)
+        # tree.clear_commands(guild=guild)
+        # await tree.sync(guild=guild)
+
         await tree.sync()
         main_logger.info("Command Tree synced!")
         if config.ENABLE_COUNT_CHANNEL:
