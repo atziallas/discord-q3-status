@@ -65,6 +65,7 @@ async def update_player_count():
     description="Show players list from server",
     # guild=discord.Object(id=config.DISCORD_SERVER_ID)
 )
+@app_commands.checks.cooldown(1, 7.0, key=lambda i: (i.guild_id, i.user.id))
 async def players_list(interaction: discord.Interaction):
     await interaction.response.defer()
     try:
